@@ -1,9 +1,15 @@
 #include <iostream>
+#include <queue>
 
 using namespace std;
 
 int main() {
-    cout << "hello world" << endl;
-    cout << 1 << endl;
-    return 0;
+  priority_queue<int> pq;
+  pq.push(4);
+  pq.push(4);
+  cout << pq.top() << endl;
+  pq.pop();
+  cout << pq.top() << endl;
+
+  return 0;
 }
