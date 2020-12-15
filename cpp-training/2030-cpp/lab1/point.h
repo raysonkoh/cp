@@ -3,11 +3,10 @@
 
 class Point {
 public:
-  Point();
   Point(double a, double b);
-  Point midpoint(Point p);
-  double angleto(Point p);
-  Point moveto(double angle, double dist);
+  Point mid_point(Point p);
+  double angle_to(Point p);
+  Point move_to(double angle, double dist);
   void print();
 
 private:
