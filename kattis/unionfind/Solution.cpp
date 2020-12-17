@@ -6,12 +6,12 @@ using namespace std;
 class UnionFind {
 public:
   int parent[1000000];
-  int rank[1000000];
+  int size[1000000];
 
   UnionFind(int n) {
     for (int i = 0; i < n; i++) {
       parent[i] = i;
-      rank[i] = 0;
+      size[i] = 1;
     }
   }
 
@@ -30,13 +30,11 @@ public:
     if (pid == qid) {
       return;
     }
-    if (rank[pid] > rank[qid]) {
+    if (size[pid] > size[qid]) {
       swap(pid, qid);
     }
     parent[pid] = qid;
-    if (rank[pid] == rank[qid]) {
-      rank[qid]++;
-    }
+    size[qid] += size[pid];
   }
 };
 
