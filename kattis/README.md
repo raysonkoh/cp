@@ -10,3 +10,5 @@
 * getshorty: dijkstra with negative log
 * pivot: two pass from left and from right, each time keep track of current max and min
 * guess: simple binary search
+* joinstrings: recursive print string problem disguised as string concat (append index instead of actual string for significant speedup)
+* railroad2: euler walk: all nodes even deg (i.e. x has deg 4, y has deg 3, make sure tol deg is even -- handshaking lemma);
