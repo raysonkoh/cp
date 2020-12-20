@@ -15,3 +15,4 @@
 * teque: simulate with two deques (one front, one back), making sure that each deque is roughly half of tol size
 * commercials: kadane's algo - key idea is dp[i] refers to max sum subarray ending at index i --> dp[i] = max(dp[i - 1] + A[x], A[x])
 * digits: stoi(very large string) will cause runtime error
+* bitsequalizer: finding patterns (kind of greedy, tricky!)
