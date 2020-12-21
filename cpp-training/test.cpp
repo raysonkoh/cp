@@ -10,6 +10,7 @@ int main() {
   cout << pq.top() << endl;
   pq.pop();
   cout << pq.top() << endl;
+  cout << (nullptr == nullptr) << endl;
 
   return 0;
 }

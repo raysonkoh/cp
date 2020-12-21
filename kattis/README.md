@@ -16,3 +16,5 @@
 * commercials: kadane's algo - key idea is dp[i] refers to max sum subarray ending at index i --> dp[i] = max(dp[i - 1] + A[x], A[x])
 * digits: stoi(very large string) will cause runtime error
 * bitsequalizer: finding patterns (kind of greedy, tricky!)
+* baloni: tricky 1D array - initialize vector with size MAX height, storing at each height the number of arrows. At height h, check height h + 1
+* numbertree: can use bit manipulation (left shift and bit-wise and) 

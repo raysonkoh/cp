@@ -1,6 +1,4 @@
 #include <iostream>
-#include <set>
-#include <vector>
 
 using namespace std;
 
@@ -11,17 +9,11 @@ int main() {
   int n;
   cin >> n;
   int res = 0;
-  vector<int> h(1000001, 0);
   for (int i = 0; i < n; i++) {
     int x;
     cin >> x;
-    x--;
-    if (h[x + 1] > 0) {
-      h[x]++;
-      h[x + 1]--;
-    } else {
-      h[x]++;
-      res++;
+    if (x < 0) {
+      res += -1 * x;
     }
   }
   cout << res << endl;
