@@ -18,3 +18,6 @@
 * bitsequalizer: finding patterns (kind of greedy, tricky!)
 * baloni: tricky 1D array - initialize vector with size MAX height, storing at each height the number of arrows. At height h, check height h + 1
 * numbertree: can use bit manipulation (left shift and bit-wise and) 
+* ceiling: create BST using pointers to left and right (kinda confused over c++ memory management / memory leaks)
+* coast: modified bfs + tedious post-processing, check for edge case (using simple inputs) and simple typo bugs in the code
+* minspantree: variant of Kruskal's Algo
