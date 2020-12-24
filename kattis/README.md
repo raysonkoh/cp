@@ -24,3 +24,5 @@
 * downtime: use stack to keep track of available servers, arrays to keep track of start and end time, serverLoad and assignment of servers
 * flowshop: use of custom comparator for priority queue
 * imageprocessing: very tedius 2d array manipulation
+* sidewayssorting: stable sort
+* workstations: similar to **downtime**, except using two queues (one for locked and one for unlocked workstations) instead of a stack (note int overflow error)
