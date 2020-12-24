@@ -26,3 +26,5 @@
 * imageprocessing: very tedius 2d array manipulation
 * sidewayssorting: stable sort
 * workstations: similar to **downtime**, except using two queues (one for locked and one for unlocked workstations) instead of a stack (note int overflow error)
+* allpairspath: standard floyd warshall, but note the tricky check for negative cycles
+* narrowartgallery: tricky 3-D DP problem
