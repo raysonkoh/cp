@@ -28,3 +28,6 @@
 * workstations: similar to **downtime**, except using two queues (one for locked and one for unlocked workstations) instead of a stack (note int overflow error)
 * allpairspath: standard floyd warshall, but note the tricky check for negative cycles
 * narrowartgallery: tricky 3-D DP problem
+* evenup: use two stacks, prove that only the immediate right neighbor is relevant when two adjacent numbers are popped
+* virtualfriends: application of UFDS using size heuristic instead of rank
+* fenwick: implementation of fenwick tree, use fast io using `ios_base::sync_with_stdio(false)` and instead of using `endl` use `\n`
