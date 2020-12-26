@@ -31,3 +31,9 @@
 * evenup: use two stacks, prove that only the immediate right neighbor is relevant when two adjacent numbers are popped
 * virtualfriends: application of UFDS using size heuristic instead of rank
 * fenwick: implementation of fenwick tree, use fast io using `ios_base::sync_with_stdio(false)` and instead of using `endl` use `\n`
+* knapsack: standard knapsack DP but with additional parent pointers
+* brexit: keep vector of initial and current deg, had a nasty bug with forgetting to insert initial `l` into the `deleted` set
+* closestsums: O(n^2) pairings, store sum in set and compare lower_bound and lower_bound--
+* gcpc: keep score vector and penalty vector and set of teams which are better
+* moneymatters: make sure tol sum in each connected component is 0
+* secretchamber: BFS to find all possible translations given a source
