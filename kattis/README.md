@@ -37,3 +37,9 @@
 * gcpc: keep score vector and penalty vector and set of teams which are better
 * moneymatters: make sure tol sum in each connected component is 0
 * secretchamber: BFS to find all possible translations given a source
+* almostperfect: sumDiv(n)
+* bing: use Trie data structure with each TrieNode storing size of its subtree
+* stringmatching: use KMP string matching algo for O(n + m) time
+* happyprime: use prime seive to check prime + cycle finding to check is happy
+* lostmap: similar to Kruskal's algo
+* ants: greedy, for each pos find dist to left / right end
