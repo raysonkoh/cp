@@ -43,3 +43,6 @@
 * happyprime: use prime seive to check prime + cycle finding to check is happy
 * lostmap: similar to Kruskal's algo
 * ants: greedy, for each pos find dist to left / right end
+* grandpabernie: rank tree using pbds, avoid duplicate by using double and truncating to int
+* shortestpath3: output must have blank line between cases (qns is not clear) and note edge cases when dist[u] = INF
+* calculatingdartscores: can brute force
