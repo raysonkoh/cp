@@ -39,10 +39,14 @@
 * secretchamber: BFS to find all possible translations given a source
 * almostperfect: sumDiv(n)
 * bing: use Trie data structure with each TrieNode storing size of its subtree
-* stringmatching: use KMP string matching algo for O(n + m) time
+* stringmatching: use KMP string matching algo for O(n + m) time, rabin-karp might be too slow
 * happyprime: use prime seive to check prime + cycle finding to check is happy
 * lostmap: similar to Kruskal's algo
 * ants: greedy, for each pos find dist to left / right end
+* classy: convert string to numerical rep for easier sorting and use custom sort comparator
+* cookieselection: online median finding algo using 2 PQs - maxHeap for smaller ranks, minHeap for higher ranks 
+* grid: slightly modified dijkstra 
+* yinyangstones: greedy, prove that only possible if num white = num black
 * grandpabernie: rank tree using pbds, avoid duplicate by using double and truncating to int
 * shortestpath3: output must have blank line between cases (qns is not clear) and note edge cases when dist[u] = INF
 * calculatingdartscores: can brute force
