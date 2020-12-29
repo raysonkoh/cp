@@ -50,3 +50,4 @@
 * grandpabernie: rank tree using pbds, avoid duplicate by using double and truncating to int
 * shortestpath3: output must have blank line between cases (qns is not clear) and note edge cases when dist[u] = INF
 * calculatingdartscores: can brute force
+* kattissquest: use map and lower_bound
