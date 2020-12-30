@@ -1,9 +1,13 @@
+# Profiles
+
+* [Kattis](https://open.kattis.com/users/raysonkoh)
+* [Codeforces](https://codeforces.com/profile/rayson.rk.koh)
 # Interesting Problems
 
 ## CodeForces
-* 690 div3 D - greedily check whether can split from k = n segments to k = 1
-* 690 div3 E1 - sort then use lower_bound, m - 1 choose k - 1, note int overflow
-* 690 div3 F - intervals don't intersect when they are totally disjoint (num start after I ends + num end after I start)
+* 690 D: greedily check whether can split from k = n segments to k = 1
+* 690 E1: sort then use lower_bound, m - 1 choose k - 1, note int overflow
+* 690 F: intervals don't intersect when they are totally disjoint (num start after I ends + num end after I start)
 
 ## Kattis
 
@@ -58,3 +62,5 @@
 * shortestpath3: output must have blank line between cases (qns is not clear) and note edge cases when dist[u] = INF
 * calculatingdartscores: can brute force
 * kattissquest: use map and lower_bound
+* spiderman: tricky DP, at each step go U or D + store solution string
+* integerlists: read input char by char, reverse by swapping start and end ptrs, drop by incr or decr start ptr
