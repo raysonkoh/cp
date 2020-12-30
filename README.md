@@ -1,5 +1,11 @@
 # Interesting Problems
 
+## CodeForces
+* 690 div3 D - greedily check whether can split from k = n segments to k = 1
+* 690 div3 E1 - sort then use lower_bound, m - 1 choose k - 1, note int overflow
+
+## Kattis
+
 * phonelist: prefix matching (use sort for speed up)
 * shortestpath1: basic dijkstra
 * 10kindsofpeople: smart BFS (i.e. do BFS once to get all connected components)
