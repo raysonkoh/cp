@@ -64,3 +64,4 @@
 * kattissquest: use map and lower_bound
 * spiderman: tricky DP, at each step go U or D + store solution string
 * integerlists: read input char by char, reverse by swapping start and end ptrs, drop by incr or decr start ptr
+* a1paper: observing patterns
