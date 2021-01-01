@@ -9,6 +9,7 @@
 * 690 E1: sort then use lower_bound, m - 1 choose k - 1, note int overflow
 * 690 F: intervals don't intersect when they are totally disjoint (num start after I ends + num end after I start)
 * circularrmq: application of segment trees with lazy prop
+* 686 D: prime factorization, k = max exponent, n = i * i *.. * i * {pdt of remaining factors}
 
 ## Kattis
 
