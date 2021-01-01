@@ -8,6 +8,7 @@
 * 690 D: greedily check whether can split from k = n segments to k = 1
 * 690 E1: sort then use lower_bound, m - 1 choose k - 1, note int overflow
 * 690 F: intervals don't intersect when they are totally disjoint (num start after I ends + num end after I start)
+* circularrmq: application of segment trees with lazy prop
 
 ## Kattis
 
