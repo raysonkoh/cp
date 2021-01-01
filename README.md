@@ -1,7 +1,7 @@
 # Profiles
 
-* [Kattis](https://open.kattis.com/users/raysonkoh)
-* [Codeforces](https://codeforces.com/profile/rayson.rk.koh)
+* [Kattis](https://open.kattis.com/users/raysk)
+* [Codeforces](https://codeforces.com/profile/raysk)
 # Interesting Problems
 
 ## CodeForces
@@ -65,3 +65,5 @@
 * spiderman: tricky DP, at each step go U or D + store solution string
 * integerlists: read input char by char, reverse by swapping start and end ptrs, drop by incr or decr start ptr
 * a1paper: observing patterns
+* restaurant: simulate queue using 2 stacks
+* polygonarea: application of shoestring algo to find area + determine CCW (+ve area) or CW (-ve area)
