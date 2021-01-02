@@ -2,6 +2,7 @@
 
 * [Kattis](https://open.kattis.com/users/raysk)
 * [Codeforces](https://codeforces.com/profile/raysk)
+
 # Interesting Problems
 
 ## CodeForces
@@ -10,6 +11,8 @@
 * 690 F: intervals don't intersect when they are totally disjoint (num start after I ends + num end after I start)
 * circularrmq: application of segment trees with lazy prop
 * 686 D: prime factorization, k = max exponent, n = i * i *.. * i * {pdt of remaining factors}
+* 686 E: "almost" tree / cthulhu graph, first find cyclic nodes, then sum each num paths within each subtree + num paths between subtrees
+* 686 F: keep prefix + suffix runningMax, rmq using segment tree, fix x and binary search y
 
 ## Kattis
 
