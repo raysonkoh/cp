@@ -5,14 +5,14 @@
 
 # Interesting Problems
 
-## CodeForces
-* 690 D: greedily check whether can split from k = n segments to k = 1
-* 690 E1: sort then use lower_bound, m - 1 choose k - 1, note int overflow
-* 690 F: intervals don't intersect when they are totally disjoint (num start after I ends + num end after I start)
+## Codeforces
+* 690-3 D: greedily check whether can split from k = n segments to k = 1
+* 690-3 E1: sort then use lower_bound, m - 1 choose k - 1, note int overflow
+* 690-3 F: intervals don't intersect when they are totally disjoint (num start after I ends + num end after I start)
 * circularrmq: application of segment trees with lazy prop
-* 686 D: prime factorization, k = max exponent, n = i * i *.. * i * {pdt of remaining factors}
-* 686 E: "almost" tree / cthulhu graph, first find cyclic nodes, then sum each num paths within each subtree + num paths between subtrees
-* 686 F: keep prefix + suffix runningMax, rmq using segment tree, fix x and binary search y
+* 686-3 D: prime factorization, k = max exponent, n = i * i *.. * i * {pdt of remaining factors}
+* 686-3 E: "almost" tree / cthulhu graph, first find cyclic nodes, then sum each num paths within each subtree + num paths between subtrees
+* 686-3 F: keep prefix + suffix runningMax, rmq using segment tree, fix x and binary search y
 
 ## Kattis
 
