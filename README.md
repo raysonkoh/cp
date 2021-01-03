@@ -79,3 +79,5 @@
 * firefly: sort then lower_bound
 * inversefactorial: num digits can uniquely identify n except edge case where n <= 6
 * anagramcounting: use java BigInteger, precompute factorials
+* longincsubseq: O(nlogn) LIS
+* bigtruck: standard dijkstra with extra maximize items op when d + wt == dist
