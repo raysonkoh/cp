@@ -76,3 +76,6 @@
 * airconditioned: greedy, aim to keep curr interval as large as possible
 * howmanydigits: num digits = log10(a*b*c*...), precompute
 * speed: bin search using double, terminate when within acceptable error range
+* firefly: sort then lower_bound
+* inversefactorial: num digits can uniquely identify n except edge case where n <= 6
+* anagramcounting: use java BigInteger, precompute factorials
