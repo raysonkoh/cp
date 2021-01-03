@@ -72,3 +72,7 @@
 * a1paper: observing patterns
 * restaurant: simulate queue using 2 stacks
 * polygonarea: application of shoestring algo to find area + determine CCW (+ve area) or CW (-ve area)
+* sim: use stl list and iterator
+* airconditioned: greedy, aim to keep curr interval as large as possible
+* howmanydigits: num digits = log10(a*b*c*...), precompute
+* speed: bin search using double, terminate when within acceptable error range
