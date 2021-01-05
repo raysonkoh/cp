@@ -13,6 +13,7 @@
 * 686-3 D: prime factorization, k = max exponent, n = i * i *.. * i * {pdt of remaining factors}
 * 686-3 E: "almost" tree / cthulhu graph, first find cyclic nodes, then sum each num paths within each subtree + num paths between subtrees
 * 686-3 F: keep prefix + suffix runningMax, rmq using segment tree, fix x and binary search y
+* 693-3 E: bin search for H, keep minimum width prefix for sorted H array
 
 ## Kattis
 
