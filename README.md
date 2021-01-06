@@ -84,3 +84,4 @@
 * anagramcounting: use java BigInteger, precompute factorials
 * longincsubseq: O(nlogn) LIS
 * bigtruck: standard dijkstra with extra maximize items op when d + wt == dist
+* orders: set count vect with MAX size, iterate thru multiples of x and where v[y] > 0, v[y + x] += v[y]
