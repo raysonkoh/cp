@@ -85,3 +85,6 @@
 * longincsubseq: O(nlogn) LIS
 * bigtruck: standard dijkstra with extra maximize items op when d + wt == dist
 * orders: set count vect with MAX size, iterate thru multiples of x and where v[y] > 0, v[y + x] += v[y]
+* ladice: interesting application of modified UFDS, proof that you can always insert into same set if unused size > 0
+* bachetsgame: dp on 2-player 0-sum game, no need to store player 2's state for speedup -> if player 1 cannot win then player 2 wins
+* ballotboxes: use PQ and add divisor to the curr max
