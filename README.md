@@ -88,3 +88,5 @@
 * ladice: interesting application of modified UFDS, proof that you can always insert into same set if unused size > 0
 * bachetsgame: dp on 2-player 0-sum game, no need to store player 2's state for speedup -> if player 1 cannot win then player 2 wins
 * ballotboxes: use PQ and add divisor to the curr max
+* rationalarithmetic: only need func for add and mul, use std::gcd for shortest form
+* millionairemadness: dijkstra from (n-1,m-1) with modified minimax relax func
