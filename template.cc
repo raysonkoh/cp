@@ -1,5 +1,7 @@
 #include <iostream>
 
+#define P 1000000007
+
 using namespace std;
 
 int main() {

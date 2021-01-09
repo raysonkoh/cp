@@ -16,6 +16,9 @@
 * 693-3 E: bin search for H, keep minimum width prefix for sorted H array
 * 693-3 F: greedy, always prefer to put vertical, maintain offset bet top and bot and do case analysis based on whether dist is even/odd
 * 693-3 G: graph DP using dfs
+* 695-2 C: requires novel insight using trees: odd dist subtract, even dist add, two cases: separate min from 2 bag or negate a whole bag
+* 695-2 D: use DP twice, once for finding num good paths starting from A[i], another for finding occurence of A[i] in good path after j moves
+* **695-2 E: too hard, will upsolve it at a later time**
 
 ## Kattis
 
