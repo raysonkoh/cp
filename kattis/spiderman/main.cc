@@ -1,6 +1,16 @@
+#include <algorithm>
+#include <iomanip>
 #include <iostream>
+#include <iterator>
 #include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <tuple>
 #include <vector>
+
+#define P 1e9 + 7
+#define EPS 1e-11
 
 using namespace std;
 
@@ -8,63 +18,76 @@ int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
   cout.tie(NULL);
-  int t;
-  cin >> t;
-  while (t--) {
+  int n;
+  cin >> n;
+  while (n--) {
     int m;
     cin >> m;
     vector<int> v(m);
-    for (int i = 0; i < m; i++) {
+    for (int i = 0; i < m; i++)
       cin >> v[i];
-    }
 
-    map<int, pair<int, string>> currSols; // (dist, maxDist, sol)
-    for (int i = 0; i < m; i++) {
-      if (i == 0) {
-        currSols[v[i]] = make_pair(v[i], "U");
-        continue;
-      }
+    int maxSz = 1001;
+    vector<vector<int>> dp(m, vector<int>(maxSz, maxSz + 1)); // -1 indicates IMPOSSIBLE
+    vector<vector<pair<int, int>>> parent(m, vector<pair<int, int>>(maxSz));
 
-      map<int, pair<int, string>> tmp;
-      for (auto it : currSols) {
-        int dist = it.first;
-        pair<int, string> p = it.second;
-
-        if (dist - v[i] >= 0) {
-          // go down
-          pair<int, string> next =
-              make_pair(max(p.first, dist - v[i]), p.second + "D");
-          if (tmp.find(dist - v[i]) != tmp.end()) {
-            tmp[dist - v[i]] =
-                tmp[dist - v[i]].first < next.first ? tmp[dist - v[i]] : next;
+    for (int i = m - 1; i >= 0; i--) {
+      for (int j = 0; j < maxSz; j++) {
+        if (i == m - 1) {
+          if (v[i] == j) {
+            dp[i][j] = j;
           } else {
-            tmp[dist - v[i]] = next;
+            dp[i][j] = maxSz + 1;
           }
-        }
-        // go up
-        pair<int, string> next =
-            make_pair(max(p.first, dist + v[i]), p.second + "U");
-        if (tmp.find(dist + v[i]) != tmp.end()) {
-          tmp[dist + v[i]] =
-              tmp[dist + v[i]].first < next.first ? tmp[dist + v[i]] : next;
+          parent[i][j] = {-1, -1};
         } else {
-          tmp[dist + v[i]] = next;
+          if (j + v[i] < maxSz && dp[i + 1][j + v[i]] != maxSz + 1) {
+            if (dp[i + 1][j + v[i]] < dp[i][j]) {
+              dp[i][j] = dp[i + 1][j + v[i]];
+              parent[i][j] = {i + 1, j + v[i]};
+            }
+          }
+
+          if (j - v[i] >= 0 && dp[i + 1][j - v[i]] != maxSz + 1) {
+            if (dp[i + 1][j - v[i]] < dp[i][j]) {
+              dp[i][j] = dp[i + 1][j - v[i]];
+              parent[i][j] = {i + 1, j - v[i]};
+            }
+          }
+
+          if (dp[i][j] != maxSz + 1)
+            dp[i][j] = max(dp[i][j], j);
         }
-      }
-      currSols = tmp;
-    }
-
-    bool foundSol = false;
-    for (auto it : currSols) {
-      if (it.first == 0) {
-        cout << it.second.second << "\n";
-        foundSol = true;
-        break;
+        // cout << "(" << i << ", " << j << "): " << dp[i][j] << endl;
       }
     }
 
-    if (!foundSol) {
+    if (dp[0][0] == maxSz + 1)
       cout << "IMPOSSIBLE\n";
+    else {
+      pair<int, int> currP = {0, 0};
+      pair<int, int> par = parent[currP.first][currP.second];
+      vector<char> res;
+      while (par.first != -1 && par.second != -1) {
+        if (par.second > currP.second) {
+          // U
+          res.push_back('U');
+        } else {
+          // D
+          res.push_back('D');
+        }
+        currP = par;
+        par = parent[currP.first][currP.second];
+      }
+
+      res.push_back('D'); // last move confirm is D
+
+      for (auto ch : res) {
+        cout << ch;
+      }
+      cout << '\n';
+
+      // cout << dp[0][0] << '\n';
     }
   }
 }

@@ -1,6 +1,16 @@
+#include <algorithm>
+#include <iomanip>
 #include <iostream>
+#include <iterator>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <tuple>
+#include <vector>
 
-#define P 1000000007
+#define P 1e9 + 7
+#define EPS 1e-11
 
 using namespace std;
 
