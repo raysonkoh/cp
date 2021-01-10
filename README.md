@@ -93,3 +93,4 @@
 * ballotboxes: use PQ and add divisor to the curr max
 * rationalarithmetic: only need func for add and mul, use std::gcd for shortest form
 * millionairemadness: dijkstra from (n-1,m-1) with modified minimax relax func
+* sellingspatulas: EVIL FLOATING POINT COMPARISONS! Note the use of EPS to compare doubles
