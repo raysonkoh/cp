@@ -95,3 +95,5 @@
 * millionairemadness: dijkstra from (n-1,m-1) with modified minimax relax func
 * sellingspatulas: EVIL FLOATING POINT COMPARISONS! Note the use of EPS to check equality of doubles
 * ticketpricing: dp[n][w] = max_i (dp[n - p[i]*q[i]][w - 1])
+* presidentialelections: 2 choices - either flip state or don't flip state
+* bagoftiles: use of bitmask to generate all subset sums, split array in half for significant speedup (i.e. meet in the middle)
