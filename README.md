@@ -97,3 +97,6 @@
 * ticketpricing: dp[n][w] = max_i (dp[n - p[i]*q[i]][w - 1])
 * presidentialelections: 2 choices - either flip state or don't flip state
 * bagoftiles: use of bitmask to generate all subset sums, split array in half for significant speedup (i.e. meet in the middle)
+* increasingsubsequence: LIS with greedily replacement of min last element of incr subseq of length i
+* canonical: simulate DP and greedy coin-change method
+* exactchange2: use subset sum to find min num of coin changes to i >= price
