@@ -13,7 +13,6 @@
 
 #define P 1e9 + 7
 #define EPS 1e-11
-#define LSOne(S) ((S) & -(S))
 
 using namespace std;
 

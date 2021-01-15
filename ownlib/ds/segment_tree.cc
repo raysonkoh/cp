@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// Update and Query using 0-based indexing
 class SegmentTree {
 public:
   int n;
@@ -43,9 +44,7 @@ public:
   }
 
   // restore rep invariant
-  void restoreRI(int i) {
-    v[i] = min(v[i * 2] + delta[i * 2], v[i * 2 + 1] + delta[i * 2 + 1]);
-  }
+  void restoreRI(int i) { v[i] = min(v[i * 2] + delta[i * 2], v[i * 2 + 1] + delta[i * 2 + 1]); }
 
   void update(int l, int r, long long val) { update(1, l, r, val); }
 

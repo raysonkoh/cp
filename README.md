@@ -19,6 +19,8 @@
 * 695-2 C: requires novel insight using trees: odd dist subtract, even dist add, two cases: separate min from 2 bag or negate a whole bag
 * 695-2 D: use DP twice, once for finding num good paths starting from A[i], another for finding occurence of A[i] in good path after j moves
 * **695-2 E: too hard, will upsolve it at a later time**
+* E-102-2 C: constructive algo, use examples to notice that aba <> bab: num inversions stay the same
+* E-102-2 D: use segment tree to find min, max, sum and note that min and max of right side should increase by sum of left
 
 ## Kattis
 
