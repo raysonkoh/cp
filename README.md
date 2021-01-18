@@ -21,6 +21,7 @@
 * **695-2 E: too hard, will upsolve it at a later time**
 * E-102-2 C: constructive algo, use examples to notice that aba <> bab: num inversions stay the same
 * E-102-2 D: use segment tree to find min, max, sum and note that min and max of right side should increase by sum of left
+* E-102-2 E: transform graph into deleting any edge and adding any edge: 1 node in original graph -> 4 nodes in transformed graph
 
 ## Kattis
 
@@ -102,3 +103,6 @@
 * increasingsubsequence: LIS with greedily replacement of min last element of incr subseq of length i
 * canonical: simulate DP and greedy coin-change method
 * exactchange2: use subset sum to find min num of coin changes to i >= price
+* almostunionfind: use vector of sets
+* sequences: notice that inversions matter only when ele = 0, then num inversions = num 1s that are ahead of the ele
+* anthonyanddiablo: given a segment, prove that the shape with greatest area is a circle
