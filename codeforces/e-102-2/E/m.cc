@@ -33,68 +33,84 @@ int main() {
     adjList[v].push_back({w, u});
   }
 
-  long long INF = 1e18;
-  vector<long long> maxEdgeWt(n);
-  vector<long long> minEdgeWt(n);
-  vector<long long> dist(n, INF);
-  vector<int> pathLength(n);
-  priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<pair<long long, int>>> pq;
-
-  maxEdgeWt[0] = 0;
-  minEdgeWt[0] = 0;
-  dist[0] = 0;
-  pathLength[0] = 0;
-  pq.push({pathLength[0], 0});
+  priority_queue<tuple<long long, int, bool, bool>, vector<tuple<long long, int, bool, bool>>, greater<tuple<long long, int, bool, bool>>> pq;
+  vector<vector<long long>> dist(n, vector<long long>(4, 1e18));
+  dist[0][0] = 0;
+  pq.push({dist[0][0], 0, false, false});
 
   while (pq.size() > 0) {
-    auto [d, nd] = pq.top();
+    auto [d, node, hasMinus, hasAdd] = pq.top();
+    // cout << "d: " << d << " node: " << node << " hasMinus: " << hasMinus << " hasAdd: " << hasAdd << endl;
     pq.pop();
-    for (auto [wt, nei] : adjList[nd]) {
-      long long tmpMax, tmpMin;
-      if (pathLength[nd] == 0) {
-        tmpMax = wt;
-        tmpMin = wt;
-      } else {
-        tmpMax = max(wt, maxEdgeWt[nd]);
-        tmpMin = min(wt, minEdgeWt[nd]);
+    if (!hasMinus && !hasAdd) {
+      if (dist[node][0] < d) {
+        continue;
       }
+    } else if (!hasMinus && hasAdd) {
+      if (dist[node][1] < d) {
+        continue;
+      }
+    } else if (hasMinus && !hasAdd) {
+      if (dist[node][2] < d) {
+        continue;
+      }
+    } else {
+      if (dist[node][3] < d) {
+        continue;
+      }
+    }
 
-      // long long newDist = dist[nd] + maxEdgeWt[nd] - minEdgeWt[nd] + wt - tmpMax + tmpMin;
-      long long newDist = d + wt;
-      // cout << "from: " << nd << " to " << nei << " dist: " << d << " newDist: " << newDist << endl;
-      if (newDist < dist[nei]) {
-        maxEdgeWt[nei] = tmpMax;
-        minEdgeWt[nei] = tmpMin;
-        dist[nei] = newDist;
-        pathLength[nei] = pathLength[nd] + 1;
-        pq.push({dist[nei], nei});
+    for (auto [wt, nei] : adjList[node]) {
+      if (!hasMinus && !hasAdd) {
+        if (d + wt < dist[nei][0]) {
+          dist[nei][0] = d + wt;
+          pq.push({dist[nei][0], nei, hasMinus, hasAdd});
+        }
+
+        if (d + wt + wt < dist[nei][1]) {
+          dist[nei][1] = d + wt + wt;
+          pq.push({dist[nei][1], nei, hasMinus, !hasAdd});
+        }
+
+        if (d < dist[nei][2]) {
+          dist[nei][2] = d;
+          pq.push({dist[nei][2], nei, !hasMinus, hasAdd});
+        }
+
+        if (d + wt < dist[nei][3]) {
+          dist[nei][3] = d + wt;
+          pq.push({dist[nei][3], nei, !hasMinus, !hasAdd});
+        }
+      } else if (!hasMinus && hasAdd) {
+        if (d + wt < dist[nei][1]) {
+          dist[nei][1] = d + wt;
+          pq.push({dist[nei][1], nei, hasMinus, hasAdd});
+        }
+
+        if (d < dist[nei][3]) {
+          dist[nei][3] = d;
+          pq.push({dist[nei][3], nei, !hasMinus, hasAdd});
+        }
+      } else if (hasMinus && !hasAdd) {
+        if (d + wt < dist[nei][2]) {
+          dist[nei][2] = d + wt;
+          pq.push({dist[nei][2], nei, hasMinus, hasAdd});
+        }
+        if (d + wt + wt < dist[nei][3]) {
+          dist[nei][3] = d + wt + wt;
+          pq.push({dist[nei][3], nei, hasMinus, !hasAdd});
+        }
+      } else {
+        if (d + wt < dist[nei][3]) {
+          dist[nei][3] = d + wt;
+          pq.push({dist[nei][3], nei, hasMinus, hasAdd});
+        }
       }
     }
   }
-
-  /*
-  for (auto x : maxEdgeWt) {
-    cout << x << " ";
-  }
-  cout << endl;
-
-  for (auto x : minEdgeWt) {
-    cout << x << " ";
-  }
-  cout << endl;
-
-  for (auto x : pathLength) {
-    cout << x << " ";
-  }
-  cout << endl;
-  */
 
   for (int i = 1; i < n; i++) {
-    if (i == n - 1) {
-      cout << dist[i] - maxEdgeWt[i] + minEdgeWt[i];
-    } else {
-      cout << dist[i] - maxEdgeWt[i] + minEdgeWt[i] << " ";
-    }
+    cout << dist[i][3] << ' ';
   }
   cout << '\n';
 }
