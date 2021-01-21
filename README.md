@@ -18,10 +18,10 @@
 * 693-3 G: graph DP using dfs
 * 695-2 C: requires novel insight using trees: odd dist subtract, even dist add, two cases: separate min from 2 bag or negate a whole bag
 * 695-2 D: use DP twice, once for finding num good paths starting from A[i], another for finding occurence of A[i] in good path after j moves
-* **695-2 E: too hard, will upsolve it at a later time**
 * E-102-2 C: constructive algo, use examples to notice that aba <> bab: num inversions stay the same
 * E-102-2 D: use segment tree to find min, max, sum and note that min and max of right side should increase by sum of left
 * E-102-2 E: transform graph into deleting any edge and adding any edge: 1 node in original graph -> 4 nodes in transformed graph
+* 696-2 D: Consider case no swaps first, then consider for a swap (i, i + 1), find rocks remaining for pile i - 1 and i + 2, check the remaining 4 piles whether ok + check min >= 0
 
 ## Kattis
 
