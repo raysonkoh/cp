@@ -4,6 +4,7 @@
 #include <iomanip>
 #include <iostream>
 #include <iterator>
+#include <list>
 #include <map>
 #include <numeric>
 #include <queue>
@@ -11,9 +12,10 @@
 #include <tuple>
 #include <vector>
 
-#define P 1e9 + 7
-#define EPS 1e-11
 #define LSOne(S) ((S) & -(S))
+
+const long long P = 1e9 + 7;
+const double EPS = 1e-11;
 
 using namespace std;
 

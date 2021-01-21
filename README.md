@@ -106,3 +106,5 @@
 * almostunionfind: use vector of sets
 * sequences: notice that inversions matter only when ele = 0, then num inversions = num 1s that are ahead of the ele
 * anthonyanddiablo: given a segment, prove that the shape with greatest area is a circle
+* trainsorting: max(lis starting from pos i + lds starting from pos i - 1)
+* builddeps: toposort with edges reversed from file that was changed
