@@ -108,3 +108,7 @@
 * anthonyanddiablo: given a segment, prove that the shape with greatest area is a circle
 * trainsorting: max(lis starting from pos i + lds starting from pos i - 1)
 * builddeps: toposort with edges reversed from file that was changed
+* nesteddolls: sort by H and LIS by W, note case H equal and only need to store endpoints
+* supercomputer: use BIT
+* humancannonball: set edge wt as time taken to travel
+* froshweek: merge sort + count inversions
