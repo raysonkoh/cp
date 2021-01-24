@@ -112,3 +112,5 @@
 * supercomputer: use BIT
 * humancannonball: set edge wt as time taken to travel
 * froshweek: merge sort + count inversions
+* walrusweights: prune values > 1000 if there exists value closer to 1000
+* dvds: key observation: you always want indx[1] < indx[2] < indx[3] < ..., if indx[i] > indx[i + 1], need to put (i + 1) to top of stack
