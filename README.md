@@ -27,6 +27,8 @@
 * 697-3 C: for each pair count (k -  num impossible x - num impossible y + 1) then divide 2 because double counting
 * 697-3 D: sort by descending b1 and b2, can choose {1,2,...,b2.size()} "2", then check target sum in prefixSum of b1
 * 697-3 E: sort, then filter for unique num, multiply by binomial coefficient
+* 697-3 F: if j == 0 flip row, can only flip col if i == 0
+* 697-3 G: dp[i] to find max num of "compatible" num <= x, use sieve and "push" dp for significant speedup
 
 ## Kattis
 
