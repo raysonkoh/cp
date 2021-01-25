@@ -22,6 +22,11 @@
 * E-102-2 D: use segment tree to find min, max, sum and note that min and max of right side should increase by sum of left
 * E-102-2 E: transform graph into deleting any edge and adding any edge: 1 node in original graph -> 4 nodes in transformed graph
 * 696-2 D: Consider case no swaps first, then consider for a swap (i, i + 1), find rocks remaining for pile i - 1 and i + 2, check the remaining 4 piles whether ok + check min >= 0
+* 697-3 A: key observation: prime factorization is {2^k * x * ...} -- check whether there exists prime factors other than 2
+* 697-3 B: use queue (dequeue and push (x + 2020) and (x + 2021)) to determine possible sums OR observe that a * 2020 + b * 2021 = (a + b) * 2020 + b, then checking R <= Q
+* 697-3 C: for each pair count (k -  num impossible x - num impossible y + 1) then divide 2 because double counting
+* 697-3 D: sort by descending b1 and b2, can choose {1,2,...,b2.size()} "2", then check target sum in prefixSum of b1
+* 697-3 E: sort, then filter for unique num, multiply by binomial coefficient
 
 ## Kattis
 
