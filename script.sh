@@ -8,16 +8,16 @@ then
     char=$(echo "$ascii" |  awk '{ printf("%c", $0); }')
     mkdir codeforces/$2/$char
     cp template.cc codeforces/$2/$char/m.cc
-    mkdir codeforces/$2/$char/inputs
-    touch codeforces/$2/$char/inputs/t.in
+    mkdir codeforces/$2/$char/i
+    touch codeforces/$2/$char/i/t.in
   done
 elif [ $1 == "k" ]
 then
   echo "Creating kattis folder for problem: $2"
   mkdir kattis/$2
   cp template.cc kattis/$2/m.cc
-  mkdir kattis/$2/inputs
-  touch kattis/$2/inputs/t.in
+  mkdir kattis/$2/i
+  touch kattis/$2/i/t.in
 else
   echo "Unknown args, use \"cf [contest-number] [num-problems]\" for codeforces contest or \"k [problem-name]\" for kattis"
 fi
