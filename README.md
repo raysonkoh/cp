@@ -31,6 +31,7 @@
 * 697-3 G: dp[i] to find max num of "compatible" num <= x, use sieve and "push" dp for significant speedup
 * 698-2 B: Notice that for all k > 10 * d + d, they are all achievable since you can keep minusing d to within range [10 * d, 10 * d + d]. For the rest of the values which is roughly < 100, do dp[i][x] -> x is achievable with digit i, dp[i][x] = true if there exists some y < x, dp[i][y] = true and (x - y) is lucky.
 * 698-2 C: Try out a bunch of examples, observe 2(a_i)(n - i) = d[i] - offset (which is 2 * sum of previous a_i). Check all a_i are valid.
+* 698-2 D: Key observation: 2x - y = x + (x - y) --> only difference bet adj elements are relevant. Closure of the set under (2x - y) is any element in original set + some multiple of gcd
 
 ## Kattis
 
