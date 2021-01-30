@@ -1,6 +1,6 @@
 # Profiles
 
-* [Kattis](https://open.kattis.com/users/raysk)
+* [Kattis](https://open.kattis.com/users/raysk) Top 50 in Singapore :)
 * [Codeforces](https://codeforces.com/profile/raysk)
 
 # Interesting Problems
@@ -125,3 +125,7 @@
 * walrusweights: prune values > 1000 if there exists value closer to 1000
 * dvds: key observation: you always want indx[1] < indx[2] < indx[3] < ..., if indx[i] > indx[i + 1], need to put (i + 1) to top of stack
 * buttonbashing: Actually a BFS problem, not dp
+* closestpair1: classic O(nlogn) closest pair, note the limits
+* virus: greedy, while front (back) equal, pop front(back), return size
+* shortestpath2: standard dijkstra with modified constraint for edge processing
+* janitortroubles: use Brahmagupta's formula
