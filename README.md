@@ -129,3 +129,5 @@
 * virus: greedy, while front (back) equal, pop front(back), return size
 * shortestpath2: standard dijkstra with modified constraint for edge processing
 * janitortroubles: use Brahmagupta's formula
+* tetration: a = n^{1 / n}
+* perfectpowers: Prove that largest p --> gcd of exp of each num in the prime factorization, if x is neg, take the largest p that is odd
