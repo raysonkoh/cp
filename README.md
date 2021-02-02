@@ -131,3 +131,5 @@
 * janitortroubles: use Brahmagupta's formula
 * tetration: a = n^{1 / n}
 * perfectpowers: Prove that largest p --> gcd of exp of each num in the prime factorization, if x is neg, take the largest p that is odd
+* nonprimefactors: num facts = pdt of (prime exp + 1), use modified sieve
+* threepowers: test bit to determine if num exists in the set, use BigInteger

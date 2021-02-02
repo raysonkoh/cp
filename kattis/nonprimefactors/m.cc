@@ -20,60 +20,54 @@ const double EPS = 1e-11;
 
 using namespace std;
 
-class PrimeSeive {
+class Primes {
  public:
-  vector<bool> v;
-  PrimeSeive(int n) { v.assign(n + 1, true); }
-  set<int> run() {
-    v[0] = false;
-    v[1] = false;
+  vector<long long> numDiv;     // number of divisors of x
+  vector<long long> numPrimes;  // number of prime numbers that is a divisor of x
+  Primes(int n) {
+    numDiv.assign(n + 1, 1);
+    numPrimes.assign(n + 1, 0);
+  }
+  void run() {
+    numDiv[0] = 0;
+    numDiv[1] = 1;
+    numPrimes[0] = 0;
+    numPrimes[1] = 0;
+
     int divisor = 2;
-    set<int> res;
-    while (divisor < v.size() && divisor * divisor < v.size()) {
-      if (v[divisor]) {
-        res.insert(divisor);
-        for (int i = divisor * divisor; i < v.size(); i += divisor) {
-          v[i] = false;
+    while (divisor < numDiv.size()) {
+      if (numPrimes[divisor] == 0) {
+        for (int i = divisor; i < numDiv.size(); i += divisor) {
+          int tmp = i;
+          long long tmp2 = 0;
+          while (tmp % divisor == 0) {
+            tmp /= divisor;
+            tmp2++;
+          }
+          numDiv[i] *= (tmp2 + 1);
+          numPrimes[i]++;
         }
       }
       divisor++;
     }
-    while (divisor < v.size()) {
-      if (v[divisor]) {
-        res.insert(divisor);
-      }
-      divisor++;
-    }
-    return res;
   }
-  bool query(int x) { return v[x]; }
 };
 
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
   cout.tie(NULL);
-  PrimeSeive ps(3e6);
-  set<int> primes = ps.run();
+  Primes pr(2000000);
+  pr.run();
   int q;
   cin >> q;
   while (q--) {
     int x;
     cin >> x;
-    int tol = 1;
-    int num = 0;
-    for (int p : primes) {
-      int tmp = 0;
-      while (x % p == 0) {
-        x /= p;
-        tmp++;
-      }
-      if (tmp > 0)
-        num++;
-      tol = tol * (tmp + 1);
-      if (x == 1)
-        break;
-    }
-    cout << tol - num << '\n';
+    // cout << "x: " << x << endl;
+    // cout << "numDivs: " << pr.numDiv[x] << endl;
+    // cout << "numPrimes: " << pr.numPrimes[x] << endl;
+    long long res = pr.numDiv[x] - pr.numPrimes[x];
+    cout << res << '\n';
   }
 }
