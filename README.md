@@ -33,6 +33,8 @@
 * 698-2 C: Try out a bunch of examples, observe 2(a_i)(n - i) = d[i] - offset (which is 2 * sum of previous a_i). Check all a_i are valid.
 * 698-2 D: Key observation: 2x - y = x + (x - y) --> only difference bet adj elements are relevant. Closure of the set under (2x - y) is any element in original set + some multiple of gcd
 * 699-2 B: brute force works (got WA in contest due to needless optimizations which caused bugs in corner cases)
+* 700-2 C: a = rb + r --> iterate through r which is upper bounded by sqrt(x) find num pairs given x,y for a given r in O(1)
+* 700-2 D: key observation: 720720 is LCM of {1,2,...,16}. Every other element can be 720720, adjacent element can be 720720 - v[i][j]^4
 
 ## Kattis
 
