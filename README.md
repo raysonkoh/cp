@@ -137,3 +137,5 @@
 * perfectpowers: Prove that largest p --> gcd of exp of each num in the prime factorization, if x is neg, take the largest p that is odd
 * nonprimefactors: num facts = pdt of (prime exp + 1), use modified sieve
 * threepowers: test bit to determine if num exists in the set, use BigInteger
+* leftandright: set up freq arr of {char, count}, if L then possible range is {min...max-1}, if R then possible range is {min + 1...max}
+* catalan: C_{n + 1} = (4n+2)/(n+2) C_{n}, use python for large nums

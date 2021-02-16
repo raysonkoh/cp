@@ -28,4 +28,18 @@ int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
   cout.tie(NULL);
+  int t;
+  cin >> t;
+  while (t--) {
+    int k;
+    cin >> k;
+    int korig = k;
+    int tol = 0;
+    while (k--) {
+      int x;
+      cin >> x;
+      tol += x;
+    }
+    cout << max(1, tol - (korig - 1)) << '\n';
+  }
 }
