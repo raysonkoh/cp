@@ -36,6 +36,7 @@
 * 701-2 C: a = rb + r --> iterate through r which is upper bounded by sqrt(x) find num pairs given x,y for a given r in O(1)
 * 701-2 D: key observation: 720720 is LCM of {1,2,...,16}. Every other element can be 720720, adjacent element can be 720720 - v[i][j]^4
 * E-104-2 B: 1 cycle (offset) roughly n/2, tol: (num cycles + expectB) % n
+* E-104-2 E: implementation-heavy, use multiset
 * 702-3 G: if S <= 0 and maxPrefixSum < x, then impossible; else, numRounds(ceil): (x - maxPrefixSum + IMPT >>S - 1<< IMPT) / S, bin-search for remainding indx on maxPrefixSum
 
 ## Kattis
