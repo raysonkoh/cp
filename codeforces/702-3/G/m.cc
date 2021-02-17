@@ -34,78 +34,45 @@ int main() {
     int n, m;
     cin >> n >> m;
     vector<long long> v(n);
-    long long round = 0;
-    long long maxDelta = -1e11;
+    vector<long long> prefixSum(n);
+    long long roundSum = 0;
     for (int i = 0; i < n; i++) {
       cin >> v[i];
-      round += v[i];
-      maxDelta = max(maxDelta, round);
+      if (i == 0)
+        prefixSum[i] = v[i];
+      else
+        prefixSum[i] = prefixSum[i - 1] + v[i];
+      roundSum += v[i];
+    }
+
+    vector<long long> maxPrefixSum(n);
+    for (int i = 0; i < n; i++) {
+      if (i == 0)
+        maxPrefixSum[i] = prefixSum[i];
+      else
+        maxPrefixSum[i] = max(maxPrefixSum[i - 1], prefixSum[i]);
     }
 
     while (m--) {
       long long x;
       cin >> x;
-      if (v[0] >= x) {
-        cout << 0 << " ";
+      // impossible case
+      if (roundSum <= 0 && maxPrefixSum[n - 1] < x) {
+        cout << -1 << ' ';
         continue;
       }
 
-      long long curr = 0;
-      int res = -1;
-      while (true) {
-        if (curr + round <= curr)
-          break;
-
-        if (max(curr, curr + maxDelta) >= x) {
-          if (curr >= x)
-            break;
-
-          for (int i = 0; i < n; i++) {
-            curr += v[i];
-            res++;
-            if (curr >= x)
-              break;
-          }
-          break;
-        } else {
-          long numRounds = x / round;
-          curr += round * numRounds;
-          res += n * numRounds;
-        }
-      }
-      cout << (curr >= x ? res : -1) << " ";
-
-      // round < 0 ?
-      /*
-      long long numRounds, tmp;
-      int i, res;
-      if (round <= 0) {
-        numRounds = 0;
-        tmp = v[0];
-        res = 0;
-        i = 1;
+      // either 1 round or > 1 rounds
+      if (maxPrefixSum[n - 1] >= x) {
+        int indx = lower_bound(maxPrefixSum.begin(), maxPrefixSum.end(), x) - maxPrefixSum.begin();
+        cout << indx << ' ';
       } else {
-        numRounds = x / round;
-        tmp = numRounds * round;
-        if (tmp >= x) {
-        }
-        res = numRounds * n - 1;
-        i = 0;
+        long long numRounds = (x - maxPrefixSum[n - 1] + roundSum - 1) / roundSum;
+        long long res = numRounds * n;
+        long long tmp = numRounds * roundSum;
+        int indx = lower_bound(maxPrefixSum.begin(), maxPrefixSum.end(), x - tmp) - maxPrefixSum.begin();
+        cout << res + indx << " ";
       }
-
-      cout << "tmp: " << tmp << endl;
-      while (i < n && tmp < x) {
-        tmp += v[i];
-        i++;
-        res++;
-      }
-
-      if (tmp >= x) {
-        cout << res << " ";
-      } else {
-        cout << -1 << " ";
-      }
-    */
     }
     cout << '\n';
   }
