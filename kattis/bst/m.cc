@@ -21,6 +21,8 @@ const double EPS = 1e-11;
 
 using namespace std;
 
+long long C = 0;
+
 // Update and Query using 0-based indexing
 class SegmentTree {
  public:
@@ -114,40 +116,38 @@ int main() {
   cout.tie(NULL);
   int n;
   cin >> n;
+  vector<int> v(n);
   SegmentTree st(n);
-  vector<int> stIndx(n);
   for (int i = 0; i < n; i++) {
     int x;
     cin >> x;
     x--;
-    stIndx[x] = i;
-    st.update(i, i, i);
+    v[i] = x;
   }
-  int lo = 0;
-  int hi = n - 1;
-  int turn = 0;
-  while (lo <= hi) {
-    if (turn % 2 == 0) {
-      // move lo
-      int stLoIndx = stIndx[lo];
-      int loIndx = st.query(stLoIndx, stLoIndx);
-      // cout << "stLoIndx: " << stLoIndx << " loIndx: " << loIndx << '\n';
-      // move to indx lo
-      // [lo...loIndx-1]
-      int numSwaps = loIndx - lo;
-      cout << numSwaps << '\n';
-      st.update(0, stLoIndx - 1, 1);
-      lo++;
+
+  set<int> nums;
+  for (int i = 0; i < n; i++) {
+    int x = v[i];
+    long long d = st.query(x, x);
+    C += d;
+    cout << C << '\n';
+    int lo, hi;
+    if (nums.size() == 0) {
+      lo = 0;
+      hi = n - 1;
     } else {
-      // move hi
-      int stHiIndx = stIndx[hi];
-      int hiIndx = st.query(stHiIndx, stHiIndx);
-      // cout << "stHiIndx: " << stHiIndx << " hiIndx: " << hiIndx << '\n';
-      int numSwaps = hi - hiIndx;
-      cout << numSwaps << '\n';
-      st.update(stHiIndx + 1, n - 1, -1);
-      hi--;
+      auto itHi = nums.lower_bound(x);
+      if (itHi == nums.end())
+        hi = n - 1;
+      else
+        hi = *itHi;
+      if (itHi == nums.begin())
+        lo = 0;
+      else
+        lo = *prev(itHi);
     }
-    turn++;
+    st.update(lo, x - 1, 1);
+    st.update(x + 1, hi, 1);
+    nums.insert(x);
   }
 }

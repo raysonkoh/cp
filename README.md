@@ -1,7 +1,7 @@
 # Profiles
 
 * [Kattis](https://open.kattis.com/users/raysk) Top 50 in Singapore :)
-* [Codeforces](https://codeforces.com/profile/raysk)
+* [Codeforces](https://codeforces.com/profile/raysk) Became Expert ;)
 
 # Interesting Problems
 
@@ -141,3 +141,7 @@
 * threepowers: test bit to determine if num exists in the set, use BigInteger
 * leftandright: set up freq arr of {char, count}, if L then possible range is {min...max-1}, if R then possible range is {min + 1...max}
 * catalan: C_{n + 1} = (4n+2)/(n+2) C_{n}, use python for large nums
+* turbo: use sum segment tree, maintain segTreeIndx for each num
+* alphabet: min no. to add is 26 - (max incr seq in S), use DP
+* bst: use sum seg tree + range update
+* intervalcover: sweep line algo, sort according to incr left endpoint, then decr right endpoint, note cancerous double comparisons

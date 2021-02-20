@@ -28,4 +28,23 @@ int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
   cout.tie(NULL);
+  long long n;
+  cin >> n;
+  set<long long> res;
+  for (long long i = 1; i <= sqrt(n); i++) {
+    if (n % i == 0) {
+      long long other = n / i;
+      res.insert(i);
+      res.insert(other);
+    }
+  }
+  bool isFirst = true;
+  for (auto x : res) {
+    if (isFirst)
+      isFirst = false;
+    else
+      cout << " ";
+    cout << x - 1;
+  }
+  cout << '\n';
 }

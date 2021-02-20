@@ -28,4 +28,21 @@ int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
   cout.tie(NULL);
+  int n;
+  cin >> n;
+  vector<int> v(n);
+  map<int, int> m;  // last pos
+  int res = n;
+  for (int i = 0; i < n; i++) {
+    int x;
+    cin >> x;
+    if (m.count(x) == 0) {
+      m[x] = i;
+      continue;
+    }
+    int tmp = i - m[x];
+    res = min(res, tmp);
+    m[x] = i;
+  }
+  cout << res << '\n';
 }
