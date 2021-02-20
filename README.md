@@ -145,3 +145,4 @@
 * alphabet: min no. to add is 26 - (max incr seq in S), use DP
 * bst: use sum seg tree + range update
 * intervalcover: sweep line algo, sort according to incr left endpoint, then decr right endpoint, note cancerous double comparisons
+* polymul2: use fft
