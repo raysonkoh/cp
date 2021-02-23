@@ -24,9 +24,6 @@ using namespace std;
 
 /*
   YOU CAN DO THIS!! ;)
-  1. Note the limits!
-  2. Give logical, short variable names
-  3. If you are stuck for a long time, skip to next problem
 */
 int main() {
   ios_base::sync_with_stdio(false);

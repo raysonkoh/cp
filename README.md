@@ -38,6 +38,8 @@
 * E-104-2 B: 1 cycle (offset) roughly n/2, tol: (num cycles + expectB) % n
 * E-104-2 E: implementation-heavy, use multiset
 * 702-3 G: if S <= 0 and maxPrefixSum < x, then impossible; else, numRounds(ceil): (x - maxPrefixSum + IMPT >>S - 1<< IMPT) / S, bin-search for remainding indx on maxPrefixSum
+* 704-2 C: greedily pick leftmost endpt in first pass from left to right, in second pass from right to left greedily pick rightmost endpt and take max diff
+* 704-2 D: observe that you can set 0th bit in y to 1 and (k + 1)th bit in x to 1 --> diff is k one bits, then the rest of the ones can be placed at pos where both x and y bit are 0
 
 ## Kattis
 
