@@ -40,6 +40,9 @@
 * 702-3 G: if S <= 0 and maxPrefixSum < x, then impossible; else, numRounds(ceil): (x - maxPrefixSum + IMPT >>S - 1<< IMPT) / S, bin-search for remainding indx on maxPrefixSum
 * 704-2 C: greedily pick leftmost endpt in first pass from left to right, in second pass from right to left greedily pick rightmost endpt and take max diff
 * 704-2 D: observe that you can set 0th bit in y to 1 and (k + 1)th bit in x to 1 --> diff is k one bits, then the rest of the ones can be placed at pos where both x and y bit are 0
+* 708-2 B: use map to store number % m and count, for a number, there can only be one other partner
+* 708-2 C1: different cases (even/odd)
+* 708-2 C2: (k - 3) 1s, then use solution for C1
 
 ## Kattis
 
