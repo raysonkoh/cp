@@ -32,4 +32,41 @@ int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
   cout.tie(NULL);
+  int t;
+  int caseNum = 1;
+  cin >> t;
+  while (t--) {
+    int n, k;
+    cin >> n >> k;
+    vector<long long> v(n);
+    for (int i = 0; i < n; i++)
+      cin >> v[i];
+
+    long long lo = 1;
+    long long hi = v[n - 1] - v[0];
+    while (lo < hi) {
+      long long mid = lo + (hi - lo) / 2;
+      int tmpK = k;
+      bool can = true;
+      for (int i = 1; i < n; i++) {
+        long long diff = v[i] - v[i - 1];
+        // num to add: ceil(diff / mid) - 1
+        long long numToAdd = ((diff + mid - 1) / mid) - 1;
+        if (tmpK - numToAdd < 0) {
+          can = false;
+          break;
+        }
+        tmpK -= numToAdd;
+      }
+      if (can) {
+        hi = mid;
+      } else {
+        lo = mid + 1;
+      }
+    }
+
+    cout << "Case #" << caseNum << ": " << lo << '\n';
+
+    caseNum++;
+  }
 }

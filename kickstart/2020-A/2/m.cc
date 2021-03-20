@@ -36,37 +36,38 @@ int main() {
   cin >> t;
   int caseNum = 1;
   while (t--) {
+    // dp[i][j] : max val for row 1...i taking j plates
+    // dp[i][j] = MAX_j' prefix(row[j']) + dp[i-1][j-j']
     int n, k, p;
     cin >> n >> k >> p;
-    vector<vector<long long>> prefixMatrix(n, vector<long long>(k));
+    vector<vector<long long>> prefixSum(n, vector<long long>(k));
     for (int i = 0; i < n; i++) {
       for (int j = 0; j < k; j++) {
-        int x;
-        cin >> x;
         if (j == 0) {
-          prefixMatrix[i][j] = x;
+          cin >> prefixSum[i][j];
         } else {
-          prefixMatrix[i][j] = x + prefixMatrix[i][j - 1];
+          long long x;
+          cin >> x;
+          prefixSum[i][j] = x + prefixSum[i][j - 1];
         }
       }
     }
 
-    // dp[i][j]: max val for first i rows choosing j plates
-    // dp[i + 1][j'] = max_j(prefix(v[i][j]) + dp[i][j' - j])
-
-    vector<vector<long long>> dp(n, vector<long long>(p + 1));
+    vector<vector<long long>> dp(n, vector<long long>(p + 1, 0));
     for (int i = 0; i < n; i++) {
       for (int j = 1; j <= p; j++) {
         if (i > 0)
           dp[i][j] = dp[i - 1][j];
-        for (int indx = 0; indx < min(j, k); indx++) {
-          // cout << "i: " << i << " j: " << j << " indx: " << indx << endl;
+        for (int indx = 0; indx < k; indx++) {
+          if (indx + 1 > j)
+            break;
           if (i == 0) {
-            dp[i][j] = max(dp[i][j], prefixMatrix[i][indx]);
+            dp[i][j] = max(dp[i][j], prefixSum[i][indx]);
           } else {
-            dp[i][j] = max(dp[i][j], prefixMatrix[i][indx] + dp[i - 1][j - (indx + 1)]);
+            dp[i][j] = max(dp[i][j], prefixSum[i][indx] + dp[i - 1][j - (indx + 1)]);
           }
         }
+        // cout << "i: " << i << " j: " << j << " val: " << dp[i][j] << '\n';
       }
     }
 

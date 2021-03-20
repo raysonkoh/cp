@@ -44,6 +44,11 @@
 * 708-2 C1: different cases (even/odd)
 * 708-2 C2: (k - 3) 1s, then use solution for C1
 
+## Google Kickstart
+
+* 2020-A-2: dp[i][j] represents max value from first i rows, picking j plates. dp[i][j] = MAX_J'(prefixSum[i][j'] + dp[i - 1][j-j'])
+* 2020-A-3: Binary search the ans for the max gap, for a given diff, num of sessions to add is ceil(diff / gap) - 1
+
 ## Kattis
 
 * phonelist: prefix matching (use sort for speed up)
