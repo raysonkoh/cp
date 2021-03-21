@@ -46,8 +46,11 @@
 
 ## Google Kickstart
 
-* 2020-A-2: dp[i][j] represents max value from first i rows, picking j plates. dp[i][j] = MAX_J'(prefixSum[i][j'] + dp[i - 1][j-j'])
-* 2020-A-3: Binary search the ans for the max gap, for a given diff, num of sessions to add is ceil(diff / gap) - 1
+* 20-A-2: dp[i][j] represents max value from first i rows, picking j plates. dp[i][j] = MAX_J'(prefixSum[i][j'] + dp[i - 1][j-j'])
+* 20-A-3: Binary search the ans for the max gap, for a given diff, num of sessions to add is ceil(diff / gap) - 1
+* 21-A-2: precompute up,down,left,right where [i][j] entry indicates num of consecutive 1s; use examples to derive formula is min(2x, y) - 1
+* 21-A-3: start from MAX, neighbors should be within 1 away, iterate until searched whole matrix; use SET as a PQ to utilize the `erase` method to minimize num of irrelevant entries in PQ
+* 21-A-4: only in the case of 4 "-1"s (i.e. cycle) do we need to spend cost, construct vertices -> rows/cols, edges -> (i,j) pos of -1s wt: B[i][j], find Max ST and the ans is the sum of edges not included
 
 ## Kattis
 
