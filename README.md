@@ -159,3 +159,4 @@
 * bst: use sum seg tree + range update
 * intervalcover: sweep line algo, sort according to incr left endpoint, then decr right endpoint, note cancerous double comparisons
 * polymul2: use fft
+* ninetynine: simple winning strategy for 2nd player: 3,6,9,...,99; as first player, if 2nd player slips up, proceed to print multiples of 3 to win
