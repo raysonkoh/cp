@@ -22,36 +22,6 @@ const double EPS = 1e-9;
 
 using namespace std;
 
-void printVect(vector<long long> &v) {
-  for (int i = 0; i < v.size(); i++) {
-    cout << v[i] << " ";
-  }
-  cout << endl;
-}
-
-long long get(int i, int k, int d, vector<vector<vector<long long>>> &dp) {
-  if (k == 1) {
-    dp[i][k][d] = 1;
-    return 1;
-  }
-
-  if (dp[i][k][d] != -1) return dp[i][k][d];
-  long long res = 2;
-  if (d == 1) {  // right
-    if (i + 1 < dp.size()) res += get(i + 1, k, d, dp) - 1;
-    res %= P;
-    if (i - 1 >= 0) res += get(i - 1, k - 1, 1 - d, dp) - 1;
-    res %= P;
-  } else {  // left
-    if (i - 1 >= 0) res += get(i - 1, k, d, dp) - 1;
-    res %= P;
-    if (i + 1 < dp.size()) res += get(i + 1, k - 1, 1 - d, dp) - 1;
-    res %= P;
-  }
-  dp[i][k][d] = res;
-  return res;
-}
-
 /*
   YOU CAN DO THIS!! ;)
   1. Note the limits!
@@ -67,10 +37,32 @@ int main() {
   while (t--) {
     int n, k;
     cin >> n >> k;
-    vector<vector<vector<long long>>> dp(n, vector<vector<long long>>(k + 1, vector<long long>(2, -1)));
+    vector<vector<vector<long long>>> dp(n, vector<vector<long long>>(k + 1, vector<long long>(2, 0)));
 
-    long long x = get(0, k, 1, dp);
+    for (int j = 1; j <= k; j++) {
+      for (int d = 0; d < 2; d++) {
+        if (d == 0) {  // left
+          for (int i = 0; i < n; i++) {
+            if (j == 1) {
+              dp[i][j][d] = 1;
+              continue;
+            }
+            dp[i][j][d] = 2;
+            dp[i][j][d] += ((i - 1 >= 0 ? dp[i - 1][j][d] - 1 : 0) % P + (i + 1 < n ? dp[i + 1][j - 1][1 - d] - 1 : 0) % P) % P;
+          }
+        } else {  // right
+          for (int i = n - 1; i >= 0; i--) {
+            if (j == 1) {
+              dp[i][j][d] = 1;
+              continue;
+            }
+            dp[i][j][d] = 2;
+            dp[i][j][d] += ((i + 1 < n ? dp[i + 1][j][d] - 1 : 0) % P + (i - 1 >= 0 ? dp[i - 1][j - 1][1 - d] - 1 : 0) % P) % P;
+          }
+        }
+      }
+    }
 
-    cout << x << '\n';
+    cout << dp[0][k][1] << '\n';
   }
 }
