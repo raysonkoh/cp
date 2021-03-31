@@ -163,3 +163,4 @@
 * cats: use MinST + num vertices
 * moviecollection: Challenging, maintain segTree of size (m + r) and pos vect, each time delete will insert into new empty node in segtree, query -> range from 0 to pos[x]
 * fruitbaskets: use subset sum
+* runningmom: finding cycle in directed graph - only have cycles if neighbor is visited AND neighbor is in the stack
