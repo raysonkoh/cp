@@ -164,3 +164,5 @@
 * moviecollection: Challenging, maintain segTree of size (m + r) and pos vect, each time delete will insert into new empty node in segtree, query -> range from 0 to pos[x]
 * fruitbaskets: use subset sum
 * runningmom: finding cycle in directed graph - only have cycles if neighbor is visited AND neighbor is in the stack
+* triangle: take log10 to find num digits
+* arithmetic: 4 octal bits (12 bits) => 3 hex bits
