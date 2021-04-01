@@ -166,3 +166,8 @@
 * runningmom: finding cycle in directed graph - only have cycles if neighbor is visited AND neighbor is in the stack
 * triangle: take log10 to find num digits
 * arithmetic: 4 octal bits (12 bits) => 3 hex bits
+* pebblesolitaire2: use integer to represent state of board, complete search
+* subseqhard: use prefixsums and map of prefixsum to index, at a certain index, check for the smaller index s.t. SUM[small, big] = 47 using map of prefixsum to prefix index
+* stickysituation: use triangle inequality: sum of any two sides > last side
+* flipfive: use bitmask
+* chineseremainder: use extended euclidean algo, note very large number use: python or java BigInteger
