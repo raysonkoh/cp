@@ -15,12 +15,13 @@
 #include <tuple>
 #include <vector>
 
-#define LSOne(S) ((S) & -(S))
-
 const long long P = 1e9 + 7;
 const double EPS = 1e-9;
 
 using namespace std;
+
+void solve() {
+}
 
 /*
   YOU CAN DO THIS!! ;)
@@ -32,4 +33,12 @@ int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
   cout.tie(NULL);
+  int t;
+  cin >> t;
+  int caseNum = 1;
+  while (t--) {
+    cout << "Case #" << caseNum << ": ";
+    solve();
+    caseNum++;
+  }
 }
