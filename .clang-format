@@ -1,0 +1,11 @@
+---
+BasedOnStyle: LLVM
+---
+Language: Cpp
+UseTab: Never
+AllowShortBlocksOnASingleLine: Always
+AllowShortIfStatementsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: false
+AllowShortLoopsOnASingleLine: true
+Cpp11BracedListStyle: true
+ColumnLimit: 0
