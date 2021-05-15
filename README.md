@@ -7,6 +7,9 @@
 
 **UPD (6/4/2021):** I have decided to not publish my solutions.
 
+## Atcoder
+* 201 D: classic 2-player game minimax problem, dp[i][j]: max diff (A - B) starting at pos i,j, dp[i][j] = max(v[i] - dp[i+1][j], v[j] - dp[i][j+1])
+
 ## Codeforces
 * 690-3 D: greedily check whether can split from k = n segments to k = 1
 * 690-3 E1: sort then use lower_bound, m - 1 choose k - 1, note int overflow
