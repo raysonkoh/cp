@@ -6,7 +6,7 @@ using namespace std;
 const long long P = 1e9 + 7;
 
 class NChooseK {
- public:
+public:
   vector<long long> fact;
   vector<long long> factInv;
 
@@ -50,7 +50,7 @@ class NChooseK {
 };
 
 class NChooseKTable {
- public:
+public:
   vector<vector<long long>> binomTable;
   NChooseKTable(int nMax, int kMax) {
     binomTable.assign(nMax + 1, vector<long long>(kMax + 1));

@@ -44,7 +44,7 @@ double closestPair(vector<pair<double, double>> &vX, vector<pair<double, double>
     minDist = r;
   }
 
-  vector<pair<double, double>> stripe;  // sorted by y
+  vector<pair<double, double>> stripe; // sorted by y
   for (int i = 0; i < vY.size(); i++) {
     if (abs(vY[i].first - leftX.back().first) < minDist) {
       stripe.push_back(vY[i]);

@@ -13,7 +13,7 @@ const double PI = acos(-1);
     Code was largely referenced from https://cp-algorithms.com/algebra/fft.html
     I still do not really understand how FFT works...
 */
-void fft(vector<cd>& a, bool invert) {
+void fft(vector<cd> &a, bool invert) {
   int n = a.size();
   if (n == 1)
     return;
@@ -39,7 +39,7 @@ void fft(vector<cd>& a, bool invert) {
   }
 }
 
-vector<long long> multiply(vector<long long> const& a, vector<long long> const& b) {
+vector<long long> multiply(vector<long long> const &a, vector<long long> const &b) {
   vector<cd> fa(a.begin(), a.end()), fb(b.begin(), b.end());
   int n = 1;
   while (n < a.size() + b.size())
