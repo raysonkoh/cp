@@ -178,3 +178,4 @@
 * stickysituation: use triangle inequality: sum of any two sides > last side
 * flipfive: use bitmask
 * chineseremainder: use extended euclidean algo, note very large number use: python or java BigInteger
+* holeynqueensbatman: classic n-queens backtracking problem, can check diag using clever manipulation of i + j and j - i

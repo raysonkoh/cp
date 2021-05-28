@@ -3,6 +3,7 @@
 #include <climits>
 #include <cmath>
 #include <complex>
+#include <cstring>
 #include <iomanip>
 #include <iostream>
 #include <iterator>
@@ -34,8 +35,9 @@ int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
   cout.tie(NULL);
-  int t;
-  cin >> t;
+  int t = 1;
+  // int t;
+  // cin >> t;
   while (t--) {
     solve();
   }

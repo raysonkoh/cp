@@ -3,6 +3,7 @@
 #include <climits>
 #include <cmath>
 #include <complex>
+#include <cstring>
 #include <iomanip>
 #include <iostream>
 #include <iterator>
