@@ -179,3 +179,6 @@
 * flipfive: use bitmask
 * chineseremainder: use extended euclidean algo, note very large number use: python or java BigInteger
 * holeynqueensbatman: classic n-queens backtracking problem, can check diag using clever manipulation of i + j and j - i
+* mravi: binary search with ~40 no. of iterations in the possible range
+* martiandna: classic sliding window, with tight constraints
+* secretsanta: number of derangements
