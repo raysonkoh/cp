@@ -1,0 +1,8 @@
+*.dSYM
+*.out
+code
+gen
+brute
+correctAnswer
+input_file
+myAnswer
