@@ -30,7 +30,7 @@ void solve() {
   1. Note the limits!
   2. Give logical, short variable names
   3. If you are stuck for a long time, skip to next problem
-  4. Can't prove a pattern? Brute force for small numbers and observe!
+  4. Can't prove a pattern (Esp Game Theory)? Brute force for small numbers and observe!
 */
 int main() {
   ios_base::sync_with_stdio(false);
