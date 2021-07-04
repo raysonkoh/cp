@@ -18,7 +18,7 @@
 #include <vector>
 
 const long long P = 1e9 + 7;
-const double EPS = 1e-9;
+const long double EPS = 1e-9;
 
 using namespace std;
 
@@ -36,7 +36,6 @@ int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
   cout.tie(NULL);
-  // int t = 1;
   int t;
   cin >> t;
   while (t--) {

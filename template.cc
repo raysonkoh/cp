@@ -18,7 +18,7 @@
 #include <vector>
 
 const long long P = 1e9 + 7;
-const double EPS = 1e-9;
+const long double EPS = 1e-9;
 
 using namespace std;
 
