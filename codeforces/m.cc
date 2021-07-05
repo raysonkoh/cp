@@ -17,12 +17,21 @@
 #include <tuple>
 #include <vector>
 
+using namespace std;
+
 const long long P = 1e9 + 7;
 const long double EPS = 1e-9;
 
-using namespace std;
+const int N = 1005;
+long long A[N];
+
+void reset() {
+  for (int i = 0; i < N; i++)
+    A[i] = 0;
+}
 
 void solve() {
+  reset();
 }
 
 /*
