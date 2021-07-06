@@ -20,18 +20,20 @@
 using namespace std;
 
 const long long P = 1e9 + 7;
-const long double EPS = 1e-9;
 
+#define RAY_DP
+
+#ifdef RAY_DP
 const int N = 1005;
-long long A[N];
+long long dp[N];
+#endif
 
 void reset() {
   for (int i = 0; i < N; i++)
-    A[i] = 0;
+    dp[i] = 0;
 }
 
 void solve() {
-  reset();
 }
 
 /*
@@ -48,6 +50,9 @@ int main() {
   int t;
   cin >> t;
   while (t--) {
+#ifdef RAY_DP
+    reset();
+#endif
     solve();
   }
 }
