@@ -21,17 +21,17 @@ using namespace std;
 
 const long long P = 1e9 + 7;
 
-#define RAY_DP
+//#define RAY_DP
 
 #ifdef RAY_DP
 const int N = 1005;
 long long dp[N];
-#endif
 
 void reset() {
   for (int i = 0; i < N; i++)
     dp[i] = 0;
 }
+#endif
 
 void solve() {
 }
