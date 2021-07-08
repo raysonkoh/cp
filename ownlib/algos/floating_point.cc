@@ -6,11 +6,11 @@ using namespace std;
 const double EPS = 1e-11;
 
 bool greaterThan(double a, double b) {
-  return a > b - EPS;
+  return (a - b) > EPS;
 }
 
 bool lesserThan(double a, double b) {
-  return a < b + EPS;
+  return (b - a) >= EPS;
 }
 
 bool isEqual(double a, double b) {
