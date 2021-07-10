@@ -42,6 +42,7 @@ void solve() {
   2. Give logical, short variable names
   3. If you are stuck for a long time, skip to next problem
   4. Can't prove a pattern (Esp Game Theory)? Brute force for small numbers and observe!
+  5. For Binary-search problems: Determine F[x] is monotonically incr or decr, then use the templates accordingly
 */
 int main() {
   ios_base::sync_with_stdio(false);
