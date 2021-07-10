@@ -21,6 +21,7 @@ using namespace std;
 
 const long long P = 1e9 + 7;
 
+//#define GOOGLE
 //#define RAY_DP
 
 #ifdef RAY_DP
@@ -50,10 +51,17 @@ int main() {
   cout.tie(NULL);
   int t;
   cin >> t;
+#ifdef GOOGLE
+  for (int i = 1; i <= t; i++) {
+    cout << "Case #" << i << ": ";
+    solve();
+  }
+#else
   while (t--) {
 #ifdef RAY_DP
     reset();
 #endif
     solve();
   }
+#endif
 }
