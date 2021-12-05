@@ -3,6 +3,22 @@
 * [Kattis](https://open.kattis.com/users/raysk) Top 50 in Singapore :)
 * [Codeforces](https://codeforces.com/profile/raysk) Became Expert ;)
 * [AtCoder](https://atcoder.jp/users/raysk)
+
+# Setup
+
+```
+alias c="g++ -std=c++17 -Wshadow -Wall -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG"
+alias cc="g++ -std=c++17 -Wshadow -Wall -O2 -Wno-unused-result"
+alias m="c m.cc"
+alias in1="> i1.in"
+alias in2="> i2.in"
+alias in3="> i3.in"
+alias in4="> i4.in"
+alias i1="./a.out < i1.in"
+alias i2="./a.out < i2.in"
+alias i3="./a.out < i3.in"
+alias i4="./a.out < i4.in"
+```
 # Interesting Problems
 
 **UPD (6/4/2021):** I have decided to not publish my solutions.
