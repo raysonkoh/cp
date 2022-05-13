@@ -32,11 +32,13 @@ int main(int argc, char *argv[]) {
   int n = opt<int>(1);
 
   printf("%d\n", n);
-  vector<int> v(n);
-  for (int i = 0; i < n; i++)
-    v[i] = i + 1;
+  for (int i = 0; i < n; i++) {
 
-  shuffle(v.begin(), v.end());
+    // cout << rnd.next(1, 10) << endl;
+    // cout << rnd.next("[a-z]{1,3}") << endl;
+  }
+
+  // shuffle(v.begin(), v.end());
 
   for (int i = 0; i < n; i++)
     printf("%d ", v[i]);
