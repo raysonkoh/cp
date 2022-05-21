@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
 
   int n = opt<int>(1);
 
-  printf("%d\n", n);
+  cout << n << endl;
   for (int i = 0; i < n; i++) {
 
     // cout << rnd.next(1, 10) << endl;
@@ -39,11 +39,6 @@ int main(int argc, char *argv[]) {
   }
 
   // shuffle(v.begin(), v.end());
-
-  for (int i = 0; i < n; i++)
-    printf("%d ", v[i]);
-
-  printf("\n");
 
   return 0;
 }
