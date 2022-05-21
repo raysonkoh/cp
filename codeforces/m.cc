@@ -44,6 +44,7 @@ void solve() {
   3. If you are stuck for a long time, skip to next problem
   4. Can't prove a pattern (Esp Game Theory)? Brute force for small numbers and observe!
   5. For Binary-search problems: Determine F[x] is monotonically incr or decr, then use the templates accordingly
+  6. For nCk, use table form / mod inverse rather than just calculating it directly for precision reasons
 */
 int main() {
   ios_base::sync_with_stdio(false);
