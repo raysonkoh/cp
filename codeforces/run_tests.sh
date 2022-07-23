@@ -1,7 +1,7 @@
 set -e
-g++ -std="c++17" m.cc -o code
-g++ -std="c++17" gen.cc -o gen
-g++ -std="c++17" brute.cc -o brute
+g++-11 -std="c++17" m.cc -o code
+g++-11 -std="c++17" gen.cc -o gen
+g++-11 -std="c++17" brute.cc -o brute
 for((i = 1; ; ++i)); do
     ./gen $i > input_file
     ./code < input_file > myAnswer

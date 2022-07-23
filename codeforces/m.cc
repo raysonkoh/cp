@@ -1,9 +1,12 @@
 #include <algorithm>
+#include <bitset>
 #include <cassert>
 #include <climits>
 #include <cmath>
 #include <complex>
 #include <cstring>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
 #include <iomanip>
 #include <iostream>
 #include <iterator>
@@ -17,11 +20,16 @@
 #include <tuple>
 #include <vector>
 
+//#define GOOGLE
+
 using namespace std;
+using namespace __gnu_pbds;
+
+typedef tree<int, null_type, less<int>, rb_tree_tag,
+             tree_order_statistics_node_update>
+    ost;
 
 const long long P = 1e9 + 7;
-
-//#define GOOGLE
 
 void solve() {
 }
