@@ -7,6 +7,7 @@
 # Setup
 
 ```
+alias g++="g++-11"
 alias c="g++ -std=c++17 -Wshadow -Wall -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG"
 alias cc="g++ -std=c++17 -Wshadow -Wall -O2 -Wno-unused-result"
 alias m="c m.cc"
@@ -94,7 +95,7 @@ alias i4="./a.out < i4.in"
 * digits: stoi(very large string) will cause runtime error
 * bitsequalizer: finding patterns (kind of greedy, tricky!)
 * baloni: tricky 1D array - initialize vector with size MAX height, storing at each height the number of arrows. At height h, check height h + 1
-* numbertree: can use bit manipulation (left shift and bit-wise and) 
+* numbertree: can use bit manipulation (left shift and bit-wise and)
 * ceiling: create BST using pointers to left and right (kinda confused over c++ memory management / memory leaks)
 * coast: modified bfs + tedious post-processing, check for edge case (using simple inputs) and simple typo bugs in the code
 * minspantree: variant of Kruskal's Algo
@@ -121,8 +122,8 @@ alias i4="./a.out < i4.in"
 * lostmap: similar to Kruskal's algo
 * ants: greedy, for each pos find dist to left / right end
 * classy: convert string to numerical rep for easier sorting and use custom sort comparator
-* cookieselection: online median finding algo using 2 PQs - maxHeap for smaller ranks, minHeap for higher ranks 
-* grid: slightly modified dijkstra 
+* cookieselection: online median finding algo using 2 PQs - maxHeap for smaller ranks, minHeap for higher ranks
+* grid: slightly modified dijkstra
 * yinyangstones: greedy, prove that only possible if num white = num black
 * grandpabernie: rank tree using pbds, avoid duplicate by using double and truncating to int
 * shortestpath3: output must have blank line between cases (qns is not clear) and note edge cases when dist[u] = INF
