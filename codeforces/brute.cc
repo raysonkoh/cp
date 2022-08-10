@@ -41,7 +41,7 @@ int main() {
   cin.tie(NULL);
   cout.tie(NULL);
   int t = 1;
-  cin >> t;
+  // cin >> t;
 #ifdef GOOGLE
   for (int i = 1; i <= t; i++) {
     cout << "Case #" << i << ": ";
@@ -49,9 +49,6 @@ int main() {
   }
 #else
   while (t--) {
-#ifdef RAY_DP
-    reset();
-#endif
     solve();
   }
 #endif
